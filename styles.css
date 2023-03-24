@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  width: 420px;
+  height: 420px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 140px;
+  height: 140px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+  border-top: none;
+}
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+  border-bottom: none;
+}
+
+.square:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.square:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.x::before {
+  content: "";
+  width: 10px;
+  height: 100px;
+  background-color: red;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.x::after {
+  content: "";
+  width: 10px;
+  height: 100px;
+  background-color: red;
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+.o::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.o::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.result {
+  color: white;
+  font-size: 50px;
+}
+
+.play-again-btn {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border: 2px solid white;
+  padding: 16px 32px;
+  border-radius: 5px;
+}
+
+.play-again-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.hidden{
+  display: none;
+}
